@@ -57,3 +57,19 @@ acceptance criteria:-
 -shopping cart will be empty after purchase
 -products can be added with ultiple quantities in the cart
 -product cart will show the total product breakdown quantity and cost with grand total
+
+
+INVEST:-
+--------
+Independent:-user stories should be self-contained and not dependent on other stories.this allows for easier prioritization and 
+             parallel development.
+Negotiable:-user story should be open to discussion and refinement. they serve as placeholders for conversation between product
+            owner and development teamto clarify requirements and make adjustment as needed.
+Valuable:-each user story should deliver value to the user or the business.they should contributes meaningfully to the overall 
+          goals and objectives of the project.
+Estimable:- this helps planning and prioritization by providing a basis for determining how log it will take to implement each 
+            story.
+Small:- it should be small enough to be completed within a single iteration or sprint.they should focus on delevering a specific
+        tangible outcome rather than being overly broad.
+Testable:-  it have clear acceptance criteria that define how their completion will be verified. this ensures that the development
+            team and stackholders have a shared understanding of what constitutes success.
