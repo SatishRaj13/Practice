@@ -1,0 +1,154 @@
+package DXCBanking;
+
+import java.util.Scanner;
+
+    abstract class AccountDetail{
+	private int accountNumber;
+	private int pinNumber;
+	private double mobileNumber;
+	private double totalBalance;
+	public AccountDetail(int accountNumber, int pinNumber, double mobileNumber, double totalBalance) {
+
+		this.accountNumber = accountNumber;
+		this.pinNumber = pinNumber;
+		this.mobileNumber = mobileNumber;
+		this.totalBalance = totalBalance;
+	}
+	public int getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(int accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	public int getPinNumber() {
+		return pinNumber;
+	}
+	public void setPinNumber(int pinNumber) {
+		this.pinNumber = pinNumber;
+	}
+	public double getMobileNumber() {
+		return mobileNumber;
+	}
+	public void setMobileNumber(double mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+	public double getTotalBalance() {
+		return totalBalance;
+	}
+	public void setTotalBalance(double totalBalance) {
+		this.totalBalance = totalBalance;
+	}
+	
+	abstract void logIn();
+}
+
+class OptionInfo extends AccountDetail{
+
+	public OptionInfo(int accountNumber, int pinNumber, double mobileNumber, double totalBalance) {
+		super(accountNumber, pinNumber, mobileNumber, totalBalance);
+		
+		
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	void logIn() {
+		
+			if(getAccountNumber()==897964 && getPinNumber()==123)
+				getAccountAccess();
+			else
+				System.out.println("\n" + "Wrong Account Number or Pin Number" + "\n");
+				
+	}
+
+	public void getAccountAccess() {
+		// TODO Auto-generated method stub
+		System.out.println("Welcome Satish Bank: ");
+		System.out.println("Checking Account: ");
+		System.out.println(" Type 1 - View Balance");
+		System.out.println(" Type 2 - Withdraw Funds");
+		System.out.println(" Type 3 - Deposit Funds");
+		System.out.println(" Type 4 - Exit");
+		System.out.print("Enter the Above option");
+		Scanner sc = new Scanner(System.in);
+		
+		int type = sc.nextInt();
+		
+		switch(type) {
+		case 1:
+			System.out.println("your total Balance is: "+getTotalBalance());
+			getAccountAccess();
+			break;
+		case 2:
+			getWithdraw();
+			break;
+		
+		case 3:
+			getDeposit();
+			break;
+		case 4:
+			System.out.println("Thank You for using Satish Bank!");
+			break;
+
+		default:
+			System.out.println("\n" + "Invalid Choice." + "\n");
+			getAccountAccess();
+		
+	}
+	
+}
+public void getDeposit() {
+		// TODO Auto-generated method stub
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter amount: ");
+	double deposite = sc.nextDouble();
+	
+	System.out.println("Please Confirm: Yes/No");
+	
+	String confirmation=sc.next();
+	
+	if(confirmation.equalsIgnoreCase("yes") && deposite>0) {
+		System.out.println("Deposited");
+		super.setTotalBalance(super.getTotalBalance() + deposite);
+		getAccountAccess();
+		
+	}else {
+		System.out.println("Please try Again!");
+		getAccountAccess();
+	}
+		
+	}
+
+public void getWithdraw() {
+		// TODO Auto-generated method stub
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter Amount: ");
+	Double amount = sc.nextDouble();
+	System.out.println("Please Confirm: Yes/No");
+    String confirmation=sc.next();
+	
+	if(confirmation.equalsIgnoreCase("yes") && getTotalBalance()>amount) {
+		
+		super.setTotalBalance(getTotalBalance()-amount);
+		System.out.println("Remaining Balance "+getTotalBalance());
+		getAccountAccess();
+
+	
+		
+	}else {
+		System.out.println("Please try Again!");
+		getAccountAccess();
+	}
+		
+	}
+}
+
+public class BankingApp {
+
+	public static void main(String[] args) {
+		OptionInfo opt = new OptionInfo(897964, 123, 865113541, 100000);
+		opt.logIn();
+
+	}
+
+}
