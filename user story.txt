@@ -1,0 +1,75 @@
+User Story:-
+------------
+          user story is a smallest unit of software system requirement written in non-technical language,
+          software feature written from the end user and custome prospective.
+          
+          it helps to capture the value that a feature will bring to the user and is used in agile software 
+          development to capture the requirements of a product.
+          
+          user story also forms the building block of aglie framework like epics and initiatives.
+          user story help the development team to understand why they are building features
+          who is the user of feature and what is the benefits of the customer creater.
+
+          user story keeps the focus on the user needs so that the team will focus on solving problems of real users.
+
+3C's of user story:-
+--------------------
+card:-A card provides a written description of the story. this is used for planning and estimation.
+Conversation:- This represents discussion between users, team, product, owners.it helps build a shared understanding.
+Confirmation:- These represents condition that need to be satisfied to ensure that the story meets all requirements.
+          
+User Story Advantage:-
+----------------------
+          Delivers high quality content
+          Eases collaboration with team members
+          helps understand users better
+          improves transparency
+          reduces risk
+ 
+As a [role], I [want to], [so that]
+
+Example:-
+---------
+as a dietician I want to see all the food allergies of the patient on the top right of the patient information screen 
+so that correct diet can be proposed.
+
+role:- dietician
+want to :- food allergies of the patient on the top right of the patient information screen
+so that:- correct diet can be proposed
+
+Lifecycle of User Story:-
+-------------------------
+pending -> To-do -> Discussion -> Devloping -> Confirming -> Finished
+
+Acceptance Criteria:-
+---------------------
+acceptance criteria define the conditios that must be met for the story to be considered complete and functioning as intended.
+its typically outline specific behaviors, functionality need to be satisfied for the story to be accepted by the product owner.
+it helps ensure clear understanding and alingment between the devlopment team and stackholders regarding the expectation for 
+the user story.
+
+
+As an [online visitor], i want to[add products in my shopping cart] so that[i can purchase multiple products at one go].
+acceptance criteria:-
+-products can be added to the cart
+-product can be moved from the cart
+-shopping cart will be empty initially
+-shopping cart will be empty after purchase
+-products can be added with ultiple quantities in the cart
+-product cart will show the total product breakdown quantity and cost with grand total
+
+
+INVEST:-
+--------
+Independent:-user stories should be self-contained and not dependent on other stories.this allows for easier prioritization and 
+             parallel development.
+Negotiable:-user story should be open to discussion and refinement. they serve as placeholders for conversation between product
+            owner and development teamto clarify requirements and make adjustment as needed.
+Valuable:-each user story should deliver value to the user or the business.they should contributes meaningfully to the overall 
+          goals and objectives of the project.
+Estimable:- this helps planning and prioritization by providing a basis for determining how log it will take to implement each 
+            story.
+Small:- it should be small enough to be completed within a single iteration or sprint.they should focus on delevering a specific
+        tangible outcome rather than being overly broad.
+Testable:-  it have clear acceptance criteria that define how their completion will be verified. this ensures that the development
+            team and stackholders have a shared understanding of what constitutes success.
